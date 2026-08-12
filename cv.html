@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thirueesvaran Thisanthan - CV</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    @page {
+      size: A4;
+      margin: 10mm;
+    }
+    @media print {
+      body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        padding: 0 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .cv-card {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans antialiased py-6">
+
+  <!-- Print Button (Hidden on PDF) -->
+  <div class="max-w-4xl mx-auto mb-4 px-4 flex justify-end no-print">
+    <button onclick="window.print()" class="bg-orange-600 hover:bg-orange-700 text-white font-semibold px-5 py-2 rounded-lg shadow flex items-center gap-2 transition-all">
+      <i data-lucide="printer" class="w-4 h-4"></i> Download / Print as PDF
+    </button>
+  </div>
+
+  <!-- Main CV Page -->
+  <main class="cv-card max-w-4xl mx-auto bg-white p-8 sm:p-10 shadow-lg rounded-xl border border-gray-200">
+    
+    <!-- Header with Profile Photo -->
+    <header class="border-b border-gray-300 pb-5 mb-5 flex flex-col sm:flex-row items-center sm:items-start justify-between gap-4">
+      <div class="flex-1 text-center sm:text-left">
+        <h1 class="text-3xl font-bold text-gray-900 uppercase tracking-tight">THIRUEESVARAN THISANTHAN</h1>
+        <p class="text-orange-600 font-semibold text-base mt-0.5">Software Developer | UI/UX Designer | Web Developer</p>
+        
+        <div class="grid grid-cols-2 gap-2 text-xs text-gray-600 mt-3 max-w-lg">
+          <div class="flex items-center gap-1.5 justify-center sm:justify-start">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-orange-600"></i>
+            <span>Jaffna, Sri Lanka</span>
+          </div>
+          <div class="flex items-center gap-1.5 justify-center sm:justify-start">
+            <i data-lucide="phone" class="w-3.5 h-3.5 text-orange-600"></i>
+            <span>+94 0771077098</span>
+          </div>
+         
+        </div>
+      </div>
+
+      <!-- Profile Photo Frame -->
+      
+    </header>
+
+    <!-- Professional Summary -->
+    <section class="mb-5">
+      <h2 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5 border-b border-gray-200 pb-1">Professional Summary</h2>
+      <p class="text-xs text-gray-700 leading-relaxed">
+        Information and Communication Technology Honours Undergraduate at the University of Vavuniya, Sri Lanka. Experienced in software development, Object-Oriented Programming (OOP), web development, and intuitive UI/UX design. Demonstrates strong problem-solving ability and hands-on experience building web and desktop software applications.
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section class="mb-5">
+      <h2 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 border-b border-gray-200 pb-1">Education</h2>
+      
+      <div>
+        <div class="flex justify-between items-start">
+          <div>
+            <h3 class="font-bold text-gray-900 text-sm">Bachelor of Information and Communication Technology (Honours)</h3>
+            <p class="text-xs text-orange-600 font-medium">Faculty of Technological Studies — University of Vavuniya</p>
+          </div>
+          <span class="text-xs text-gray-500 font-mono">2024 – Present</span>
+        </div>
+        <p class="text-xs font-medium text-gray-600 mt-1">Status: Undergraduate | CGPA: 3.48</p>
+
+        <div class="mt-2">
+          <p class="text-xs font-semibold text-gray-700 mb-1">Key Modules:</p>
+          <div class="flex flex-wrap gap-1 text-[11px] text-gray-700">
+            <span class="bg-gray-100 px-2 py-0.5 rounded border border-gray-200">Fundamentals of Programming</span>
+            <span class="bg-gray-100 px-2 py-0.5 rounded border border-gray-200">C & C++</span>
+            <span class="bg-gray-100 px-2 py-0.5 rounded border border-gray-200">Java & OOP</span>
+            <span class="bg-gray-100 px-2 py-0.5 rounded border border-gray-200">Web Technologies</span>
+            <span class="bg-gray-100 px-2 py-0.5 rounded border border-gray-200">Software Design & Development</span>
+            <span class="bg-gray-100 px-2 py-0.5 rounded border border-gray-200">Operating Systems</span>
+            <span class="bg-gray-100 px-2 py-0.5 rounded border border-gray-200">Multimedia & Graphics</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="mb-5">
+      <h2 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 border-b border-gray-200 pb-1">Skills & Technologies</h2>
+      <div class="grid grid-cols-2 gap-2 text-xs">
+        <div>
+          <span class="font-bold text-gray-800">Programming Languages:</span>
+          <p class="text-gray-600">Java, C, C++, JavaScript</p>
+        </div>
+        <div>
+          <span class="font-bold text-gray-800">Web Technologies:</span>
+          <p class="text-gray-600">HTML5, CSS3, JavaScript, Tailwind CSS</p>
+        </div>
+        <div>
+          <span class="font-bold text-gray-800">Software Engineering:</span>
+          <p class="text-gray-600">Object-Oriented Programming (OOP), Software Architecture</p>
+        </div>
+        <div>
+          <span class="font-bold text-gray-800">Design & Multimedia:</span>
+          <p class="text-gray-600">UI/UX Design, Graphic Design, Interactive Prototyping</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="mb-5">
+      <h2 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 border-b border-gray-200 pb-1">Key Projects</h2>
+      
+      <div class="space-y-3">
+        <div>
+          <div class="flex justify-between items-baseline">
+            <h3 class="font-bold text-gray-900 text-xs">Blood Donation Management System</h3>
+            <span class="text-[11px] text-orange-600 font-mono">HTML / CSS / JS</span>
+          </div>
+          <p class="text-xs text-gray-600 mt-0.5">
+            Designed and developed an interactive web platform for managing donor records, requests, and galleries.
+          </p>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-baseline">
+            <h3 class="font-bold text-gray-900 text-xs">Java Desktop Application</h3>
+            <span class="text-[11px] text-orange-600 font-mono">Java / Swing / OOP</span>
+          </div>
+          <p class="text-xs text-gray-600 mt-0.5">
+            Built a functional desktop program implementing Object-Oriented Programming (OOP) concepts for optimized data management.
+          </p>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-baseline">
+            <h3 class="font-bold text-gray-900 text-xs">Interactive E-Commerce & UI/UX Multimedia Prototypes</h3>
+            <span class="text-[11px] text-orange-600 font-mono">UI/UX / Prototyping</span>
+          </div>
+          <p class="text-xs text-gray-600 mt-0.5">
+            Designed user interface layouts and interactive web/mobile prototypes focused on user experience and product display.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section>
+      <h2 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5 border-b border-gray-200 pb-1">Certifications</h2>
+      <div class="flex justify-between items-center text-xs">
+        <div>
+          <p class="font-bold text-gray-900">Python for Beginners</p>
+          <p class="text-gray-600">E-Certificate Course</p>
+        </div>
+        <span class="text-gray-500 font-mono text-[11px]">Completed</span>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

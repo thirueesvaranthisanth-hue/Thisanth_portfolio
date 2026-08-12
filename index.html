@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thirueesvaran Thisanthan | Portfolio</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- DevIcon CDN for Programming Logos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#FF5500',
+              hover: '#E04800',
+              glow: 'rgba(255, 85, 0, 0.25)',
+            },
+            dark: {
+              bg: '#0B0B0E',
+              card: '#13131A',
+              border: '#22222E',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Glowing Effects */
+    .hero-ring {
+      box-shadow: 0 0 60px 10px rgba(255, 85, 0, 0.4), inset 0 0 30px rgba(255, 85, 0, 0.3);
+    }
+    .glass-card {
+      background: rgba(19, 19, 26, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  </style>
+</head>
+<body class="bg-dark-bg text-gray-200 antialiased font-sans selection:bg-brand selection:text-white">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-dark-bg/80 backdrop-blur-md border-b border-dark-border">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2">
+        <span class="bg-brand text-black font-black text-xl px-2.5 py-1 rounded">TT</span> <span >Thisanth</span>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-xs sm:text-sm font-medium text-gray-400">
+        <a href="#home" class="text-white transition-colors">HOME</a>
+        <a href="#about" class="hover:text-white transition-colors">ABOUT</a>
+        <a href="#education" class="hover:text-white transition-colors">EDUCATION</a>
+        <a href="#skills" class="hover:text-white transition-colors">SKILLS</a>
+        <a href="#projects" class="hover:text-white transition-colors">PROJECTS</a>
+        <a href="#contact" class="hover:text-white transition-colors">CONTACT</a>
+      </nav>
+
+      <!-- CTA -->
+      <a href="#contact" class="hidden sm:inline-flex items-center gap-2 border border-brand text-brand hover:bg-brand hover:text-white font-medium text-sm px-5 py-2.5 rounded-lg transition-all">
+        LET'S TALK <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left Content -->
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 text-brand text-sm font-mono tracking-wide">
+          <span>&lt; hello, I'm /&gt;</span>
+        </div>
+        
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
+          THIRUEESVARAN <br/>
+          <span class="text-brand">THISANTHAN</span>
+        </h1>
+        
+        <h2 class="text-xl sm:text-2xl text-gray-300 font-light">
+          Software Developer <span class="text-brand">|</span> UI/UX Designer <span class="text-brand">|</span>Web Developer<span class="text-brand">|</span>
+        </h2>
+        
+        <p class="text-gray-400 max-w-xl text-base leading-relaxed">
+          I am information and  Communication Technology Honours Undergraduate at the University of Vavuniya, Sri Lanka. Passionate about software development,UI/UX design, object-oriented programming, modern web technologies, and intuitive graphic design.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap items-center gap-4 pt-4">
+          <a href="#projects" class="bg-brand hover:bg-brand-hover text-white font-semibold px-6 py-3.5 rounded-lg flex items-center gap-2 transition-all shadow-lg shadow-brand/20">
+            VIEW MY WORK <i data-lucide="arrow-right" class="w-4 h-4"></i>
+
+
+<!-- CV Download Button -->
+<a id="downloadBtn"
+   href="cv5.pdf"
+   download="cv5.pdf"
+   class="border border-dark-border hover:border-gray-500 text-gray-300 hover:text-white font-semibold px-6 py-3.5 rounded-lg flex items-center gap-2">
+   DOWNLOAD CV <i data-lucide="download" class="w-4 h-4"></i>
+</a>
+
+<script>
+  const rawBase64 = "JVBERi0xLjcN..."; // Your Base64 string
+
+  // Function to convert Base64 to Blob
+  function base64ToBlob(base64, type = 'application/pdf') {
+    const cleanBase64 = base64.replace(/^data:application\/pdf;base64,/, '');
+    const byteCharacters = atob(cleanBase64);
+    const byteNumbers = new Array(byteCharacters.length);
+    for (let i = 0; i < byteCharacters.length; i++) {
+      byteNumbers[i] = byteCharacters.charCodeAt(i);
+    }
+    const byteArray = new Uint8Array(byteNumbers);
+    return new Blob([byteArray], { type: type });
+  }
+
+  // Create Blob URL and assign to button
+  const blob = base64ToBlob(rawBase64);
+  const blobUrl = URL.createObjectURL(blob);
+  
+  document.getElementById('downloadBtn').href = blobUrl;
+
+  
+</script>
+        </div>
+
+        <!-- Social Links -->
+        <div class="flex items-center gap-5 pt-6 text-gray-400">
+          <a href="#" class="hover:text-brand transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
+          <a href="#" class="hover:text-brand transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+          <a href="#" class="hover:text-brand transition-colors"><i data-lucide="mail" class="w-5 h-5"></i></a>
+        </div>
+      </div>
+
+      <!-- Right Profile Image & Code Card -->
+      <div class="lg:col-span-5 relative flex flex-col items-center justify-center">
+        <!-- Profile Image Ring -->
+        <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full p-2 hero-ring border-2 border-brand/50 mb-6">
+          <img src="profile.jpeg" 
+               alt="Thirueesvaran Thisanthan" 
+               class="w-full h-full object-cover object-top rounded-full hover:scale-105 transition-all duration-500">
+        </div>
+
+        <!-- Code snippet card -->
+        <div class="w-full max-w-xs glass-card p-4 rounded-xl border border-dark-border text-xs font-mono space-y-1">
+          <p class="text-brand"><span class="text-purple-400">class</span> Student {</p>
+          <p class="pl-4 text-gray-300">name: <span class="text-green-400">'Thisanthan'</span>;</p>
+          <p class="pl-4 text-gray-300">age: <span class="text-orange-400">23</span>;</p>
+          <p class="pl-4 text-gray-300">location: <span class="text-green-400">'Jaffna, LK'</span>;</p>
+          <p class="pl-4 text-gray-300">university: <span class="text-green-400">'UOV'</span>;</p>
+          <p class="text-brand">}</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= ABOUT SECTION ================= -->
+  <section id="about" class="py-20 bg-dark-bg border-t border-dark-border">
+    <div class="max-w-7xl mx-auto px-6">
+      <p class="text-brand text-xs font-semibold tracking-widest uppercase mb-2">ABOUT ME</p>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-8">Design. Code. Innovate.</h2>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div class="lg:col-span-6 space-y-4 text-gray-400 leading-relaxed">
+          <p>
+            Hello! I am <strong class="text-white">Thirueesvaran Thisanthan</strong>, a 23-year-old developer originally from <strong class="text-white">Jaffna</strong>, currently pursuing my undergraduate degree at the <strong class="text-white">University of Vavuniya</strong>.
+          </p>
+          <p>
+            My core strength lies in programming languages like Java, C, and C++ with strong Object-Oriented Programming (OOP) concepts,UI/UX design,alongside modern web development technologies. I also design intuitive UI/UX interfaces and graphic design assets.
+          </p>
+        </div>
+
+        <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-5 bg-dark-card border border-dark-border rounded-xl">
+            <i data-lucide="map-pin" class="w-6 h-6 text-brand mb-2"></i>
+            <h3 class="text-base font-bold text-white">Hometown</h3>
+            <p class="text-sm text-gray-400">Jaffna, Sri Lanka</p>
+          </div>
+          <div class="p-5 bg-dark-card border border-dark-border rounded-xl">
+            <i data-lucide="user" class="w-6 h-6 text-brand mb-2"></i>
+            <h3 class="text-base font-bold text-white">Age</h3>
+            <p class="text-sm text-gray-400">23 Years Old</p>
+          </div>
+          <div class="p-5 bg-dark-card border border-dark-border rounded-xl">
+            <i data-lucide="graduation-cap" class="w-6 h-6 text-brand mb-2"></i>
+            <h3 class="text-base font-bold text-white">University</h3>
+            <p class="text-sm text-gray-400">University of Vavuniya</p>
+          </div>
+          <div class="p-5 bg-dark-card border border-dark-border rounded-xl">
+            <i data-lucide="palette" class="w-6 h-6 text-brand mb-2"></i>
+            <h3 class="text-base font-bold text-white">Focus</h3>
+            <p class="text-sm text-gray-400">Software &amp; UI/UX Design</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EDUCATION SECTION ================= -->
+  <section id="education" class="py-20 border-t border-dark-border">
+    <div class="max-w-7xl mx-auto px-6">
+      <p class="text-brand text-xs font-semibold tracking-widest uppercase mb-2">ACADEMIC BACKGROUND</p>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-10">Education</h2>
+
+      <div class="p-8 bg-dark-card border border-dark-border rounded-xl space-y-6">
+        <!-- Degree Header -->
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-dark-border pb-6">
+          <div>
+            <h3 class="text-2xl font-bold text-white">Bachelor of Information and Communication Technology (Honours)</h3>
+            <p class="text-brand font-semibold text-base mt-1">Faculty of Technological Studies — University of Vavuniya</p>
+          </div>
+            <span class="px-4 py-1.5 bg-brand/10 text-brand border border-brand/20 rounded-full text-xs font-bold uppercase tracking-wider">
+            2024-present
+          </span>
+          <span class="px-4 py-1.5 bg-brand/10 text-brand border border-brand/20 rounded-full text-xs font-bold uppercase tracking-wider">
+            Undergraduate
+          </span>
+            <span class="px-4 py-1.5 bg-brand/10 text-brand border border-brand/20 rounded-full text-xs font-bold uppercase tracking-wider">
+            CGPA 3.48
+          </span>
+        </div>
+
+        <!-- Relevant Coursework / Studies -->
+        <div>
+          <h4 class="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4 flex items-center gap-2">
+            <i data-lucide="book-open" class="w-4 h-4 text-brand"></i> Relevant Coursework &amp; Key Modules
+          </h4>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+            <div class="p-3 bg-dark-bg border border-dark-border rounded-lg flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-brand"></span>
+              <span class="text-sm font-medium text-gray-300">Fundamentals of Programming</span>
+            </div>
+            <div class="p-3 bg-dark-bg border border-dark-border rounded-lg flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-brand"></span>
+              <span class="text-sm font-medium text-gray-300">C Programming</span>
+            </div>
+            <div class="p-3 bg-dark-bg border border-dark-border rounded-lg flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-brand"></span>
+              <span class="text-sm font-medium text-gray-300">C++ Programming</span>
+            </div>
+            <div class="p-3 bg-dark-bg border border-dark-border rounded-lg flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-brand"></span>
+              <span class="text-sm font-medium text-gray-300">Java Programming</span>
+            </div>
+            <div class="p-3 bg-dark-bg border border-dark-border rounded-lg flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-brand"></span>
+              <span class="text-sm font-medium text-gray-300">OOP Programming</span>
+            </div>
+            <div class="p-3 bg-dark-bg border border-dark-border rounded-lg flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-brand"></span>
+              <span class="text-sm font-medium text-gray-300">Web Technologies</span>
+            </div>
+            <div class="p-3 bg-dark-bg border border-dark-border rounded-lg flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-brand"></span>
+              <span class="text-sm font-medium text-gray-300">Software Design &amp; Development</span>
+            </div>
+            <div class="p-3 bg-dark-bg border border-dark-border rounded-lg flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-brand"></span>
+              <span class="text-sm font-medium text-gray-300">Operating Systems</span>
+            </div>
+            <div class="p-3 bg-dark-bg border border-dark-border rounded-lg flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-brand"></span>
+              <span class="text-sm font-medium text-gray-300">Multimedia &amp; Graphics Programming</span>
+            </div>
+            <!-- Inside your Education Card -->
+<!-- Inside your Education Card -->
+<div class="mt-4 pt-4 border-t border-dark-border flex items-center justify-between">
+  <!-- Left Side: Icon + Text -->
+  <div class="flex items-center gap-2">
+    <i data-lucide="award" class="w-4 h-4 text-brand"></i>
+    <span class="text-xs text-gray-400">Python for Beginners-certificate Course</span>
+  </div>
+
+  <!-- Right Side: View Link -->
+  <a href="Python_for_Beginners_E-Certificate.pdf" target="_blank" class="inline-flex items-center gap-2 text-xs font-semibold text-brand hover:underline">
+    <i data-lucide="external-link" class="w-4 h-4"></i> View Certificate
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TECH STACK & SKILLS ================= -->
+  <section id="skills" class="py-20 border-t border-dark-border">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-brand text-xs font-semibold tracking-widest uppercase mb-2">MY TECH STACK</p>
+      <h2 class="text-3xl font-bold text-white mb-10">Skills &amp; Technologies</h2>
+
+      <div class="flex flex-wrap items-center justify-center gap-4 max-w-4xl mx-auto">
+        <!-- Java Badge -->
+        <div class="px-5 py-3 bg-dark-card border border-dark-border rounded-lg flex items-center gap-3 hover:border-brand transition-colors">
+          <i class="devicon-java-plain colored text-2xl"></i>
+          <span class="text-white font-bold text-sm">Java</span>
+        </div>
+
+        <!-- C Badge -->
+        <div class="px-5 py-3 bg-dark-card border border-dark-border rounded-lg flex items-center gap-3 hover:border-brand transition-colors">
+          <i class="devicon-c-plain colored text-2xl"></i>
+          <span class="text-white font-bold text-sm">C</span>
+        </div>
+
+        <!-- C++ Badge -->
+        <div class="px-5 py-3 bg-dark-card border border-dark-border rounded-lg flex items-center gap-3 hover:border-brand transition-colors">
+          <i class="devicon-cplusplus-plain colored text-2xl"></i>
+          <span class="text-white font-bold text-sm">C++</span>
+        </div>
+
+        <!-- OOP Badge -->
+        <div class="px-5 py-3 bg-dark-card border border-dark-border rounded-lg flex items-center gap-3 hover:border-brand transition-colors">
+          <i data-lucide="cpu" class="w-5 h-5 text-brand"></i>
+          <span class="text-white font-bold text-sm">OOP</span>
+        </div>
+
+        <!-- HTML5 Badge -->
+        <div class="px-5 py-3 bg-dark-card border border-dark-border rounded-lg flex items-center gap-3 hover:border-brand transition-colors">
+          <i class="devicon-html5-plain colored text-2xl"></i>
+          <span class="text-white font-bold text-sm">HTML5</span>
+        </div>
+
+        <!-- CSS3 Badge -->
+        <div class="px-5 py-3 bg-dark-card border border-dark-border rounded-lg flex items-center gap-3 hover:border-brand transition-colors">
+          <i class="devicon-css3-plain colored text-2xl"></i>
+          <span class="text-white font-bold text-sm">CSS3</span>
+        </div>
+
+        <!-- JavaScript Badge -->
+        <div class="px-5 py-3 bg-dark-card border border-dark-border rounded-lg flex items-center gap-3 hover:border-brand transition-colors">
+          <i class="devicon-javascript-plain colored text-2xl"></i>
+          <span class="text-white font-bold text-sm">JavaScript</span>
+        </div>
+
+        <!-- UI/UX Design Badge -->
+        <div class="px-5 py-3 bg-dark-card border border-dark-border rounded-lg flex items-center gap-3 hover:border-brand transition-colors">
+          <i data-lucide="layout" class="w-5 h-5 text-brand"></i>
+          <span class="text-white font-bold text-sm">UI/UX Design</span>
+        </div>
+
+        <!-- Graphic Design Badge -->
+        <div class="px-5 py-3 bg-dark-card border border-dark-border rounded-lg flex items-center gap-3 hover:border-brand transition-colors">
+          <i data-lucide="palette" class="w-5 h-5 text-brand"></i>
+          <span class="text-white font-bold text-sm">Graphic Design</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS SECTION ================= -->
+  <section id="projects" class="py-20 border-t border-dark-border">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-end justify-between mb-12">
+        <div>
+          <p class="text-brand text-xs font-semibold tracking-widest uppercase mb-2">FEATURED PROJECTS</p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white">Selected Work</h2>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Project Card 1 -->
+<a href="https://www.linkedin.com/posts/thirueesvaran-thisanthan-72078434b_java-coding-softwaredevelopment-ugcPost-7493002728202350593-ZJgJ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFeAawgBRgxapuGiGvgQGUh9wZNA2qgDOPA" target="_blank" rel="noopener noreferrer" class="block bg-dark-card border border-dark-border rounded-xl overflow-hidden hover:border-brand transition-all">
+    <div class="h-48 bg-gray-800 flex items-center justify-center">
+        <i data-lucide="code" class="w-12 h-12 text-brand"></i>
+    </div>
+
+    <div class="p-6">
+        <h3 class="text-xl font-bold text-white mb-2">Personal Finance Tracker</h3>
+        <p class="text-sm text-gray-400 mb-4">Built using Object-Oriented Programming (OOP) concepts to manage data efficiently.</p>
+        <span class="text-xs font-mono text-brand">Java / Swing / OOP</span>
+    </div>
+</a>
+
+  
+       <!-- Project Card 2 -->
+    <!-- Project Card 2 (Clickable Web Project) -->
+   <a href="blood\bloood\about.html" target="_blank" rel="noopener noreferrer" class="block bg-dark-card border border-dark-border rounded-xl overflow-hidden hover:border-brand transition-all group">
+    <!-- Icon/Header Container -->
+    <div class="h-48 bg-gray-800 flex items-center justify-center group-hover:bg-gray-700/80 transition-colors">
+        <i data-lucide="heart-handshake" class="w-12 h-12 text-brand group-hover:scale-110 transition-transform"></i>
+    </div>
+    
+    <!-- Card Body -->
+    <div class="p-6">
+        <div class="flex items-center justify-between mb-2">
+            <h3 class="text-xl font-bold text-white group-hover:text-brand transition-colors">Blood Donation System</h3>
+            <i data-lucide="external-link" class="w-4 h-4 text-gray-400 group-hover:text-brand"></i>
+        </div>
+        
+        <p class="text-sm text-gray-400 mb-4">
+            Interactive web platform for managing donor records, requests, and galleries.
+        </p>
+        
+        <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-brand">HTML / CSS / JS</span>
+            <span class="text-xs font-bold text-white group-hover:underline">Launch App &rarr;</span>
+        </div>
+    </div>
+</a>
+
+        <!-- Project Card 3 -->
+    <div class="bg-dark-card border border-dark-border rounded-xl overflow-hidden hover:border-brand transition-all">
+  <!-- Video Player Section -->
+  <div class="h-48 bg-gray-800 flex items-center justify-center overflow-hidden">
+    <video controls class="w-full h-full object-cover">
+      <source src="project-1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Content Section -->
+  <div class="p-6">
+    <h3 class="text-xl font-bold text-white mb-2">UI/UX &amp; Graphics Project 1</h3>
+    <p class="text-sm text-gray-400 mb-4">Interactive Mobile Application.</p>
+    <span class="text-xs font-mono text-brand">UI/UX / Multimedia</span>
+  </div>
+</div>
+<!-- Project Card 4 -->
+      <div class="bg-dark-card border border-dark-border rounded-xl overflow-hidden hover:border-brand transition-all">
+  <!-- Video Player Section -->
+  <div class="h-48 bg-gray-800 flex items-center justify-center overflow-hidden">
+    <video controls class="w-full h-full object-cover">
+      <source src="project-2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Content Section -->
+  <div class="p-6">
+    <h3 class="text-xl font-bold text-white mb-2">UI/UX &amp; Graphics Project 2</h3>
+    <p class="text-sm text-gray-400 mb-4">Interactive E-commerce display the shoe item.</p>
+    <span class="text-xs font-mono text-brand">UI/UX / Multimedia</span>
+  </div>
+</div>
+      </div>
+    </div>
+  </section>
+
+
+
+<!-- ================= PROJECTS Certificate ================= -->
+  <section id="projects" class="py-20 border-t border-dark-border">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-end justify-between mb-12">
+        <div>
+          <p class="text-brand text-xs font-semibold tracking-widest uppercase mb-2">FEATURED PROJECTS</p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white">Certificate</h2>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+
+    
+      
+<!-- Certificate Card 1-->
+<div class="group relative bg-[#14161d] border border-dark-border/80 hover:border-brand rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand/20 flex flex-col justify-between">
+  
+  <!-- Image Container with Hover Zoom & Badge -->
+  <div class="relative w-full h-52 overflow-hidden bg-black/40">
+    <img src="hydra.jpeg" alt="Rule Breakerz Certificate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out">
+    <span class="absolute top-3 right-3 bg-brand/90 text-white text-[11px] font-bold tracking-wider uppercase px-3 py-1 rounded-full backdrop-blur-md shadow-md">
+      Certificate
+    </span>
+  </div>
+
+  <!-- Content Body -->
+  <div class="p-6 flex flex-col flex-grow justify-between">
+    <div>
+      <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand transition-colors duration-200">
+        Rule Breakerz Certificate
+      </h3>
+      <p class="text-gray-400 text-sm leading-relaxed mb-6">
+        Certificate of participation for successfully participating in the Cyber Security event organized by Cyber Club.
+      </p>
+    </div>
+
+    <!-- Card Footer & Action Link -->
+    <div class="pt-4 border-t border-dark-border/50 flex items-center justify-between">
+      <span class="text-xs text-gray-500 font-medium">Verified Issued</span>
+      <a href="hydra.jpeg" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand hover:text-white transition-colors">
+        View Certificate 
+        <span class="inline-block transition-transform duration-200 group-hover:translate-x-1.5">&rarr;</span>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+
+  
+      
+  <!-- Certificate Card  3-->
+<div class="group relative bg-[#14161d] border border-dark-border/80 hover:border-brand rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand/20 flex flex-col justify-between">
+  
+  <!-- Image Container with Hover Zoom & Badge -->
+  <div class="relative w-full h-52 overflow-hidden bg-black/40">
+    <img src="vanni_certificate.jpg" alt="Rule Breakerz Certificate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out">
+    <span class="absolute top-3 right-3 bg-brand/90 text-white text-[11px] font-bold tracking-wider uppercase px-3 py-1 rounded-full backdrop-blur-md shadow-md">
+      Certificate
+    </span>
+  </div>
+
+  <!-- Content Body -->
+  <div class="p-6 flex flex-col flex-grow justify-between">
+    <div>
+      <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand transition-colors duration-200">
+        InnovateX Hackathon Certificate
+      </h3>
+      <p class="text-gray-400 text-sm leading-relaxed mb-6">
+       Honored to receive this Certificate of Participation for my performance at the InnovateX Hackathon 🚀
+Grateful for the opportunity to learn, compete, and grow through the IEEE VanniXtreme 2.0 event.
+      </p>
+    </div>
+
+    <!-- Card Footer & Action Link -->
+    <div class="pt-4 border-t border-dark-border/50 flex items-center justify-between">
+      <span class="text-xs text-gray-500 font-medium">Verified Issued</span>
+      <a href="vanni_certificate.jpg" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand hover:text-white transition-colors">
+        View Certificate 
+        <span class="inline-block transition-transform duration-200 group-hover:translate-x-1.5">&rarr;</span>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<!-- Certificate Card 2-->
+<div class="group relative bg-[#14161d] border border-dark-border/80 hover:border-brand rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand/20 flex flex-col justify-between">
+  
+  <!-- Image Container with Hover Zoom & Badge -->
+  <div class="relative w-full h-52 overflow-hidden bg-black/40">
+    <img src="gitcup_action.jpeg" alt="Rule Breakerz Certificate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out">
+    <span class="absolute top-3 right-3 bg-brand/90 text-white text-[11px] font-bold tracking-wider uppercase px-3 py-1 rounded-full backdrop-blur-md shadow-md">
+      Certificate
+    </span>
+  </div>
+
+  <!-- Content Body -->
+  <div class="p-6 flex flex-col flex-grow justify-between">
+    <div>
+      <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand transition-colors duration-200">
+        Microsoft Student Ambassaders
+      </h3>
+      <p class="text-gray-400 text-sm leading-relaxed mb-6">
+       Proud to have completed the Microsoft Student Ambassadors workshop on Introduction to GitHub & GitHub Actions.
+The session deepened my understanding of Git version control, collaborative development with GitHub, and workflow automation using GitHub Actions.
+      </p>
+    </div>
+
+    <!-- Card Footer & Action Link -->
+    <div class="pt-4 border-t border-dark-border/50 flex items-center justify-between">
+      <span class="text-xs text-gray-500 font-medium">Verified Issued</span>
+      <a href="gitcup_action.jpeg"" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand hover:text-white transition-colors">
+        View Certificate 
+        <span class="inline-block transition-transform duration-200 group-hover:translate-x-1.5">&rarr;</span>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+  
+      
+
+
+
+<!-- Certificate Card  4-->
+<div class="group relative bg-[#14161d] border border-dark-border/80 hover:border-brand rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand/20 flex flex-col justify-between">
+  
+  <!-- Image Container with Hover Zoom & Badge -->
+  <div class="relative w-full h-52 overflow-hidden bg-black/40">
+    <img src="postman.jpg" alt="Rule Breakerz Certificate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out">
+    <span class="absolute top-3 right-3 bg-brand/90 text-white text-[11px] font-bold tracking-wider uppercase px-3 py-1 rounded-full backdrop-blur-md shadow-md">
+      Certificate
+    </span>
+  </div>
+
+  <!-- Content Body -->
+  <div class="p-6 flex flex-col flex-grow justify-between">
+    <div>
+      <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand transition-colors duration-200">
+        Certificate of Appreciation for participating
+      </h3>
+      <p class="text-gray-400 text-sm leading-relaxed mb-6">
+       Grateful to receive a Certificate of Appreciation for participating in the Postman API 101 in-person session held at the University of Vavuniya.
+ Thank you for the valuable learning experience
+      </p>
+    </div>
+
+    <!-- Card Footer & Action Link -->
+    <div class="pt-4 border-t border-dark-border/50 flex items-center justify-between">
+      <span class="text-xs text-gray-500 font-medium">Verified Issued</span>
+      <a href="postman.jpg" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand hover:text-white transition-colors">
+        View Certificate 
+        <span class="inline-block transition-transform duration-200 group-hover:translate-x-1.5">&rarr;</span>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+  <!-- ================= CONTACT SECTION ================= -->
+  <section id="contact" class="py-20 border-t border-dark-border">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <!-- Form -->
+        <div class="lg:col-span-7 space-y-6">
+          <p class="text-brand text-xs font-semibold tracking-widest uppercase">GET IN TOUCH</p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white">Let's Connect</h2>
+          <p class="text-gray-400 text-sm">Feel free to reach out for collaboration or inquiries.</p>
+
+          <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4 pt-4">
+    <!-- Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="0d72ca50-a0fc-41e6-b489-3a3bfd83e8e0">
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <input type="text" name="name" placeholder="Your Name" required class="w-full bg-dark-card border border-dark-border rounded-lg px-4 py-3 text-sm">
+        <input type="email" name="email" placeholder="Your Email" required class="w-full bg-dark-card border border-dark-border rounded-lg px-4 py-3 text-sm">
+    </div>
+
+    <textarea name="message" rows="4" placeholder="Your Message" required class="w-full bg-dark-card border border-dark-border rounded-lg px-4 py-3 text-sm"></textarea>
+
+    <button type="submit" class="bg-brand hover:bg-brand-hover text-white font-semibold px-8 py-3.5 rounded-lg flex items-center gap-2">
+        SEND MESSAGE <i data-lucide="send" class="w-4 h-4"></i>
+    </button>
+</form>
+        </div>
+
+        <!-- Info Sidebar -->
+        <div class="lg:col-span-5 space-y-6 bg-dark-card border border-dark-border p-8 rounded-xl flex flex-col justify-center">
+          <div class="flex items-start gap-4">
+            <i data-lucide="user" class="w-6 h-6 text-brand mt-1"></i>
+            <div>
+              <p class="text-xs text-gray-400 uppercase">Full Name</p>
+              <p class="text-white font-medium">Thirueesvaran Thisanthan</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <i data-lucide="map-pin" class="w-6 h-6 text-brand mt-1"></i>
+            <div>
+              <p class="text-xs text-gray-400 uppercase">Location</p>
+              <p class="text-white font-medium">Jaffna, Sri Lanka</p>
+            </div>
+          </div>
+          <!-- Phone Number Block -->
+<div class="flex items-start gap-4">
+  <i data-lucide="phone" class="w-6 h-6 text-brand mt-1"></i>
+  <div>
+    <p class="text-xs text-gray-400 uppercase">Phone</p>
+    <a href="tel:+94XXXXXXXXX" class="text-white font-medium hover:underline">
+      +94 0771077098
+    </a>
+  </div>
+</div>
+
+          <div class="flex items-start gap-4">
+            <i data-lucide="graduation-cap" class="w-6 h-6 text-brand mt-1"></i>
+            <div>
+              <p class="text-xs text-gray-400 uppercase">Institution</p>
+              <p class="text-white font-medium">University of Vavuniya</p>
+            </div>
+          </div>
+          <!-- LinkedIn Block -->
+<div class="flex items-start gap-4">
+  <svg class="w-6 h-6 fill-current text-brand mt-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.78a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24Z"/>
+  </svg>
+  <div>
+    <p class="text-xs text-gray-400 uppercase tracking-wider">LinkedIn</p>
+    <a href="https://www.linkedin.com/in/thirueesvaran-thisanthan-72078434b/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B2jYa79TzSY%2BN8L7wUHwf9w%3D%3D" target="_blank" rel="noopener noreferrer" class="text-white font-medium hover:underline">
+      Thirueesvaran Thisanthan
+    </a>
+  </div>
+</div>
+
+<!-- GitHub Block -->
+<div class="flex items-start gap-4">
+  <svg class="w-6 h-6 fill-current text-brand mt-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/>
+  </svg>
+  <div>
+    <p class="text-xs text-gray-400 uppercase tracking-wider">GitHub</p>
+    <a href="https://github.com/thirueesvaranthisanth-hue/desktop-tutorial" target="_blank" rel="noopener noreferrer" class="text-white font-medium hover:underline">
+      Thisanth
+    </a>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t border-dark-border text-center text-xs text-gray-500">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p>&copy; 2026 Thirueesvaran Thisanthan. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="#home" class="hover:text-white">Home</a>
+        <a href="#about" class="hover:text-white">About</a>
+        <a href="#education" class="hover:text-white">Education</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
