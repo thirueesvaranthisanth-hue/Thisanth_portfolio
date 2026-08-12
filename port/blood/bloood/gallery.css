@@ -1,0 +1,355 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8f9fa;
+    color:#333;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    background:#c1121f;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:17px;
+    transition:.3s;
+}
+
+nav a:hover,
+nav a.active{
+    color:#ffd166;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    background:linear-gradient(rgba(193,18,31,.75),rgba(193,18,31,.75)),
+    url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1600");
+    background-size:cover;
+    background-position:center;
+    height:420px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content{
+    width:80%;
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+    line-height:1.7;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 35px;
+    background:white;
+    color:#c1121f;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#ffd166;
+}
+
+/* =========================
+   GALLERY SECTION
+========================= */
+
+.gallery-section{
+    padding:70px 8%;
+    text-align:center;
+}
+
+.gallery-section h2{
+    font-size:38px;
+    color:#c1121f;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    margin-bottom:45px;
+    color:#666;
+    font-size:18px;
+}
+
+.gallery{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+
+}
+
+/* =========================
+   IMAGE BOX
+========================= */
+
+.image-box{
+
+    position:relative;
+    overflow:hidden;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    cursor:pointer;
+
+}
+
+.image-box img{
+
+    width:100%;
+    height:280px;
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.image-box:hover img{
+
+    transform:scale(1.1);
+
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+.overlay{
+
+    position:absolute;
+    left:0;
+    top:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(193,18,31,.85);
+
+    color:white;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+.image-box:hover .overlay{
+
+    opacity:1;
+
+}
+
+.overlay h3{
+
+    font-size:26px;
+    margin-bottom:10px;
+
+}
+
+.overlay p{
+
+    font-size:16px;
+
+}
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote{
+
+    background:#c1121f;
+    color:white;
+    padding:60px 10%;
+    text-align:center;
+
+}
+
+.quote h2{
+
+    font-size:34px;
+    margin-bottom:15px;
+
+}
+
+.quote p{
+
+    font-size:20px;
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+
+}
+
+footer p{
+
+    margin:8px;
+
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox{
+
+    position:fixed;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.9);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.lightbox img{
+
+    max-width:85%;
+    max-height:85%;
+    border-radius:10px;
+    box-shadow:0 0 20px white;
+
+}
+
+.close{
+
+    position:absolute;
+
+    top:25px;
+    right:40px;
+
+    color:white;
+
+    font-size:50px;
+
+    cursor:pointer;
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+header{
+
+    flex-direction:column;
+
+}
+
+nav{
+
+    margin-top:15px;
+
+}
+
+nav a{
+
+    display:inline-block;
+    margin:8px;
+
+}
+
+.hero{
+
+    height:350px;
+
+}
+
+.hero h1{
+
+    font-size:36px;
+
+}
+
+.hero p{
+
+    font-size:17px;
+
+}
+
+.gallery{
+
+    grid-template-columns:1fr;
+
+}
+
+.quote h2{
+
+    font-size:26px;
+
+}
+
+}
