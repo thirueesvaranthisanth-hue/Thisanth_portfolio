@@ -1,0 +1,299 @@
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    color:#333;
+    line-height:1.6;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+    background:#d90429;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:17px;
+    transition:0.3s;
+}
+
+nav a:hover,
+nav .active{
+    color:#ffd166;
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSySD31CTY-s2eBc7Aug4owUqxUwW-mQj6BmCPKLrp98FR3AHNq6rKVoo86&s=10");
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:120px 20px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#d90429;
+    color:white;
+    padding:14px 30px;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#a8001f;
+    transform:scale(1.05);
+}
+
+/* ==========================
+   ABOUT SECTION
+========================== */
+
+.about{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+    padding:70px;
+    background:white;
+    flex-wrap:wrap;
+}
+
+.about-image img{
+    width:420px;
+    max-width:100%;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+.about-text{
+    max-width:550px;
+}
+
+.about-text h2{
+    color:#d90429;
+    margin-bottom:20px;
+    font-size:36px;
+}
+
+.about-text p{
+    margin-bottom:20px;
+}
+
+/* ==========================
+   MISSION CARDS
+========================== */
+
+.about-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:70px 30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:white;
+    width:320px;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h2{
+    color:#d90429;
+    margin-bottom:15px;
+}
+
+/* ==========================
+   PROCESS
+========================== */
+
+.process{
+    background:#fff5f5;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.process h2{
+    color:#d90429;
+    margin-bottom:40px;
+}
+
+.steps{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.step{
+    background:white;
+    width:220px;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.step:hover{
+    transform:translateY(-8px);
+}
+
+.step h3{
+    width:60px;
+    height:60px;
+    background:#d90429;
+    color:white;
+    border-radius:50%;
+    line-height:60px;
+    margin:auto;
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+.step h4{
+    color:#d90429;
+    margin-bottom:10px;
+}
+
+/* ==========================
+   FACTS
+========================== */
+
+.facts{
+    background:white;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.facts h2{
+    color:#d90429;
+    margin-bottom:40px;
+}
+
+.fact-boxes{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.fact{
+    background:#f8f8f8;
+    width:220px;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.fact:hover{
+    transform:scale(1.05);
+}
+
+.fact h3{
+    color:#d90429;
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.fact p{
+    font-weight:bold;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    padding:20px;
+}
+
+nav{
+    margin-top:15px;
+}
+
+nav a{
+    display:inline-block;
+    margin:10px;
+}
+
+.hero h1{
+    font-size:38px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.about{
+    padding:40px 20px;
+}
+
+.about-container,
+.process,
+.facts{
+    padding:50px 20px;
+}
+
+}
+/* Footer */
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}

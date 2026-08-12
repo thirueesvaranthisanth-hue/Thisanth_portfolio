@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - BloodCare</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(rgba(245, 247, 250, 0.85), rgba(245, 247, 250, 0.85)), 
+                        url('https://images.unsplash.com/photo-1615461066841-6116e61058f4?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #2b2d42;
+            line-height: 1.6;
+        }
+
+        header {
+            background: rgba(219, 4, 41, 0.95);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        nav a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-left: 28px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ffd166;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after,
+        .active::after {
+            width: 100%;
+        }
+
+        nav a:hover,
+        .active {
+            color: #ffd166 !important;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(219, 4, 41, 0.85), rgba(239, 35, 60, 0.9)),
+                        url('https://images.unsplash.com/photo-1615461066841-6116e61058f4?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 100px 20px;
+            color: white;
+            position: relative;
+            box-shadow: inset 0 0 100px rgba(0,0,0,0.2);
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: 50px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 19px;
+            max-width: 650px;
+            margin: 0 auto;
+            font-weight: 400;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            padding: 80px 8%;
+            flex-wrap: wrap;
+        }
+
+        .contact-info,
+        .contact-form {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 50px 45px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+            width: 100%;
+            max-width: 520px;
+            flex: 1 1 450px;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .contact-info:hover,
+        .contact-form:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 50px rgba(219, 4, 41, 0.1);
+        }
+
+        .contact-info h2,
+        .contact-form h2 {
+            color: #d90429;
+            margin-bottom: 35px;
+            font-size: 28px;
+            position: relative;
+            padding-bottom: 12px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .contact-info h2::after,
+        .contact-form h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #d90429, #ef233c);
+            border-radius: 4px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin: 26px 0;
+            font-size: 16.5px;
+            color: #4a4a4a;
+            font-weight: 500;
+        }
+
+        .info-item i {
+            font-size: 18px;
+            color: white;
+            margin-right: 20px;
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, #d90429, #ef233c);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(219, 4, 41, 0.25);
+        }
+
+        .hours {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px dashed rgba(219, 4, 41, 0.15);
+        }
+
+        .hours h3 {
+            color: #2b2d42;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .hours h3 i {
+            color: #d90429;
+        }
+
+        .hours p {
+            margin: 12px 0;
+            color: #555;
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+            font-weight: 500;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 10px 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 16px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            font-size: 15.5px;
+            transition: all 0.3s ease;
+            background: rgba(248, 249, 250, 0.8);
+            color: #2b2d42;
+            font-weight: 500;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #999;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #d90429;
+            box-shadow: 0 0 0 4px rgba(217, 4, 41, 0.12);
+            outline: none;
+            background: white;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(90deg, #d90429, #ef233c);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16.5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(217, 4, 41, 0.25);
+            letter-spacing: 0.5px;
+        }
+
+        .contact-form button:hover {
+            background: linear-gradient(90deg, #b00020, #d90429);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(217, 4, 41, 0.35);
+        }
+
+        .contact-form button:active {
+            transform: translateY(0);
+        }
+
+        footer {
+            background: #11141a;
+            color: #8a8f99;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 80px;
+            font-size: 14px;
+            border-top: 4px solid #d90429;
+        }
+
+        footer p:first-child {
+            color: #ff4d6d;
+            font-weight: 700;
+            font-size: 17px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><i class="fa-solid fa-heart-pulse"></i> BloodCare</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="blood.html">Blood Info</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Contact Us</h1>
+        <p>Have questions about blood donation? Want to organize a camp? Reach out to our team today.</p>
+    </section>
+
+    <section class="contact-container">
+
+        <div class="contact-info">
+            <h2>Get In Touch</h2>
+            <div class="info-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Colombo, Sri Lanka</span>
+            </div>
+            <div class="info-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>+94 77 123 4567</span>
+            </div>
+            <div class="info-item">
+                <i class="fa-solid fa-envelope"></i>
+                <span>info@bloodcare.com</span>
+            </div>
+
+            <div class="hours">
+                <h3><i class="fa-regular fa-clock"></i> Working Hours</h3>
+                <p><span>Monday - Friday</span> <span>8.00 AM - 5.00 PM</span></p>
+                <p><span>Saturday</span> <span>9.00 AM - 1.00 PM</span></p>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send a Message</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+    </section>
+
+    <footer>
+        <p><i class="fa-solid fa-heart"></i> Donate Blood, Save Lives <i class="fa-solid fa-heart"></i></p>
+        <p>&copy; 2026 BloodCare. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let subject = document.getElementById("subject").value.trim();
+            let message = document.getElementById("message").value.trim();
+
+            if (name === "" || email === "" || subject === "" || message === "") {
+                alert("Please fill all fields!");
+                return;
+            }
+
+            alert("Thank you, " + name + "! Your message has been sent successfully.");
+            document.getElementById("contactForm").reset();
+        });
+    </script>
+
+</body>
+</html>
